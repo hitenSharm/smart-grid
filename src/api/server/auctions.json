@@ -1,0 +1,42 @@
+[
+  {
+    "owner": "1MAA7wSdmLUwEQhMJnn2UAuLkpkWJWj6Lb",
+    "start_time": 67,
+    "end_time": 192,
+    "highestbid": 73,
+    "highestBidder":"1GVY6iHviEsQv2nT2grPvcNxrA41FiMv8",
+    "bids": [20,52,41,50,36,10,51,43,65,73]
+  },
+  {
+    "owner": "1C3JX9LZdftP2i9xvPAAU848fCYKZXENF9",
+    "start_time": 98,
+    "end_time": 158,
+    "highestbid": 94,
+    "highestBidder":"17eKWBZy54XpxAENM3z43Fafj57ZaDTR2G",
+    "bids": [ 66, 74, 51, 61, 83, 70, 38, 2, 17, 43 ,94 ]
+  },
+  {
+    "owner": "1PQNiPo1NQs1qUgrmmic43voxkGThQ9hdp",
+    "start_time": 30,
+    "end_time": 131,
+    "highestbid": 52,
+    "highestBidder":"19wt3jcgmpQCJnxMs58m9nb6JAPyGKYZXZ",
+    "bids": [ 10, 11, 20, 43, 15, 5, 25, 24, 37, 31,52 ]
+  },
+  {
+    "owner": "1MWeKGuFCPhvPcM4NsNfXBqJCFyR21yf6x",
+    "start_time": 77,
+    "end_time": 138,
+    "highestbid": 67,
+    "highestBidder":"12ZeQqibzLZF7nyu396KmP1P38Jh2n7fBd",
+    "bids":  [ 66, 74, 51,43, 15, 5,2, 17, 43 ,67]
+  },
+  {
+    "owner": "1FniBRVHqgqmWGzSBNNzn6KkjJKsoUYvU5",
+    "start_time": 28,
+    "end_time": 181,
+    "highestbid": 98,
+    "highestBidder":"1K1HdkLDue2uQ9wYs1Q5zpWhqyibo631U",
+    "bids": [43, 15, 5,74, 51,43, 24, 37, 31,52,98]
+  }
+]
