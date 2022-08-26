@@ -1,5 +1,32 @@
-[{"meter_id":1,"user_id":"0x4d1ccdb64cef029a406454291e9e556779377ade","monthlyConsume":91,"monthlyProduce":23},
-{"meter_id":2,"user_id":"0xc693123e24051be5ed7ae4698fea2efee35e94cf","monthlyConsume":110,"monthlyProduce":22},
-{"meter_id":3,"user_id":"0x655a4ff0cb71c58b64062ae35f40434a85ce9241","monthlyConsume":105,"monthlyProduce":10},
-{"meter_id":4,"user_id":"0xbbe707be9a05c1fa800d80862e75a7b5bd020d6b","monthlyConsume":68,"monthlyProduce":125},
-{"meter_id":5,"user_id":"0x76e0f960518f4da8449b86df6f1933250c8d8171","monthlyConsume":53,"monthlyProduce":140}]
+[
+  {
+    "meter_id": 1,
+    "user_id": "0x4d1ccdb64cef029a406454291e9e556779377ade",
+    "monthlyConsume": 91,
+    "monthlyProduce": 23
+  },
+  {
+    "meter_id": 2,
+    "user_id": "0xc693123e24051be5ed7ae4698fea2efee35e94cf",
+    "monthlyConsume": 110,
+    "monthlyProduce": 22
+  },
+  {
+    "meter_id": 3,
+    "user_id": "0x655a4ff0cb71c58b64062ae35f40434a85ce9241",
+    "monthlyConsume": 105,
+    "monthlyProduce": 10
+  },
+  {
+    "meter_id": 4,
+    "user_id": "0xbbe707be9a05c1fa800d80862e75a7b5bd020d6b",
+    "monthlyConsume": 68,
+    "monthlyProduce": 125
+  },
+  {
+    "meter_id": 5,
+    "user_id": "0x76e0f960518f4da8449b86df6f1933250c8d8171",
+    "monthlyConsume": 53,
+    "monthlyProduce": 140
+  }
+]
