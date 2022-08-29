@@ -1,5 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import {useParams, Link} from 'react-router-dom';
+import { Form, Input, Button, notification } from "antd";
 import { reactLocalStorage } from "reactjs-localstorage";
 
 import {
@@ -59,6 +60,7 @@ export default function Auction() {
     const [details,setDetails]=useState({});
     const [chartData,setData]=useState([]);
     const [bidderLabels,setLabels]=useState([]);
+    const [bid,setBid]=useState(0);
 
     const { id } = useParams();
 
@@ -68,16 +70,33 @@ export default function Auction() {
         setDetails(obj[0]);
       }
     },[id])
+
+    const openNotificationWithIcon = (type) => {
+      notification[type]({
+        message: 'Needs to be higher than the highest bid!',
+        description:
+          'Input a value higher than the highest bid!',
+      });
+    };
+
+    const onfinish = () =>{     
+      if(bid<details.highestbid){
+        openNotificationWithIcon('error');
+        return ;
+      }
+      setData(prevState => [...prevState,bid]); 
+      setLabels(prevState => [...prevState,`bidder ${chartData.length+1}`]);     
+    }   
     
     useEffect(()=>{
-      console.log(details);
+      //console.log(details);
       if(details.owner){
         setData(details.bids);
         let temp=[];
         details.bids.forEach((element,i) => {
           temp.push(`bidder ${i+1}`);
         });
-        console.log(temp)
+        //console.log(temp)
         setLabels(temp)
       }
     },[details])
@@ -117,10 +136,13 @@ export default function Auction() {
       Auction owner : {details && details.owner.substring(0,5)} ...
       </h3>
       <h3 style={{ color: "whitesmoke", fontSize: "20px" }}>
-      Highest Bid : {details && details.highestbid} 
+      Highest Bid : ₹{details && details.highestbid}/2KwH
       </h3>
-      <h3 style={{ color: "whitesmoke", fontSize: "20px" }}>
+      {/* <h3 style={{ color: "whitesmoke", fontSize: "20px" }}>
       Highest Bidder : {details && details.highestBidder.substring(0,5)} ...
+      </h3> */}
+      <h3 style={{ color: "whitesmoke", fontSize: "20px" }}>
+      Quantity : {details && details.quantity}
       </h3>
       <h3 style={{ color: "whitesmoke", fontSize: "20px" }}>
       Bidding Details:
@@ -133,6 +155,31 @@ export default function Auction() {
       >
         <Line options={options} data={data} />
       </div>
+        <div style={{
+          marginTop:"25px",
+          display:"flex",
+          justifyContent:"center",
+          alignItems:"center"
+        }}>
+        <Form
+        style={{
+          display:"flex",
+          justifyContent:"center",
+          alignItems:"center",
+          flexDirection:"column"
+        }}                
+        >
+          <Form.Item           
+          label={<p style={{color:"white",fontSize:"15px",margin:"0px"}}>Bid</p>}
+          value="bidValue"                  
+          >
+            <Input placeholder='bid value' onChange={(e)=>{setBid(e.target.value)}}/>
+          </Form.Item>
+        <Form.Item>
+        <Button type='primary' onClick={()=>{onfinish()}}>Place Bid!</Button>
+        </Form.Item>
+        </Form>
+        </div>
     </div>):<></>}
     </>
     
