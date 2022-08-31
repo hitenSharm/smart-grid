@@ -3,15 +3,20 @@ import { reactLocalStorage } from "reactjs-localstorage";
 import { Row, Col, Button, Typography } from "antd";
 
 import auctionlist from "../../api/server/auctions.json";
+import { useNavigate } from "react-router-dom";
 
 const { Title } = Typography;
 
 export default function Auctions() {
   const [allAcutions, setAuctions] = useState([]);
-
+  let navigate = useNavigate();
   useEffect(() => {
     setAuctions(reactLocalStorage.getObject("auctions", auctionlist, true));
   }, []);
+
+  const goToBid = (value) => {
+    navigate(`/auction/${value}`);
+  }
 
   useEffect(() => {
     reactLocalStorage.setObject("auctions", auctionlist);
@@ -122,7 +127,9 @@ export default function Auctions() {
                   color: "beige",
                 }}
               >
-                <Button type="primary">Bid!</Button>
+                <Button type="primary" onClick={()=>{
+                  goToBid(item.owner)
+                }}>Bid!</Button>
               </Typography.Text>
             </Col>
           </Row>
