@@ -1,0 +1,68 @@
+[
+  {
+    "constant": false,
+    "inputs": [
+      { "name": "id", "type": "uint256" },
+      { "name": "monthConsume", "type": "uint256" },
+      { "name": "monthProd", "type": "uint256" }
+    ],
+    "name": "updateUserMeter",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [{ "name": "", "type": "uint256" }],
+    "name": "users",
+    "outputs": [
+      { "name": "meterID", "type": "uint256" },
+      { "name": "monthlyConsumption", "type": "uint256" },
+      { "name": "monthlyProduction", "type": "uint256" },
+      { "name": "userID", "type": "address" }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "dataWork",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      { "name": "monthConsume", "type": "uint256" },
+      { "name": "monthProd", "type": "uint256" }
+    ],
+    "name": "newUser",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getMeterID",
+    "outputs": [{ "name": "", "type": "uint256" }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [{ "name": "", "type": "uint256" }],
+    "name": "supplier",
+    "outputs": [{ "name": "", "type": "uint256" }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
