@@ -1,6 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Original Smart Contracts were written on Remix. This project only shows the MVP of the frontend. The backend is not public as it was purely open for my thesis purposes.
 
 ## Available Scripts
 
